@@ -1,0 +1,33 @@
+server:
+    port: 9091
+spring:
+    freemarker:
+        charset: UTF-8
+        content-type: text/html; charset=utf-8
+        request-context-attribute: request
+        suffix: .html
+        template-loader-path: classpath:/templates
+    redis:
+        host: 127.0.0.1
+        password: 123456
+        port: 6379
+    session:
+        store-type: redis
+#logging:
+#    level:
+#        root: debug
+
+smart:
+    sso:
+        app-id: server1
+        app-secret: 123456
+        server-url: http://server.smart-sso.com
+        filter:
+            exclude-urls:
+                - /login,/logout
+                - /oauth2/*
+                - /custom/*
+                - /assets/*
+        timeout: 7200
+        session:
+            manager: redis
