@@ -33,38 +33,38 @@ public class SsoCommonAutoConfiguration {
     public SessionManager sessionManager(AccessTokenManager accessTokenManager, TicketGrantingTicketManager ticketGrantingTicketManager) {
         return new SessionManager(accessTokenManager, ticketGrantingTicketManager);
     }
-
-    /**
-     * 单点登录Filter容器
-     *
-     * @return
-     */
-    @Bean
-    public FilterRegistrationBean<SmartContainer> smartContainer() {
-
-        SmartContainer smartContainer = new SmartContainer();
-        smartContainer.setServerUrl(properties.getServerUrl());
-        smartContainer.setAppId(properties.getAppId());
-        smartContainer.setAppSecret(properties.getAppSecret());
-        SsoClientProperties.SsoFilter filter = properties.getFilter();
-        Set<String> excludeUrls = filter.getExcludeUrls();
-
-        String join = String.join(",", excludeUrls);
-//        join += "/login,/logout,/oauth2/*,/custom/*,/assets/*";
-        // 忽略拦截URL,多个逗号分隔
-        smartContainer.setExcludeUrls(join);
-
-        smartContainer.setFilters(new LogoutFilter(), new LoginFilter());
-
-        FilterRegistrationBean<SmartContainer> registration = new FilterRegistrationBean<>();
-        registration.setFilter(smartContainer);
-
-        Set<String> addUrlPatterns = filter.getAddUrlPatterns();
-        addUrlPatterns.add("/*");
-        String[] arr = addUrlPatterns.toArray(new String[addUrlPatterns.size()]);
-        registration.addUrlPatterns(arr);
-        registration.setOrder(filter.getOrder());
-        registration.setName(filter.getName());
-        return registration;
-    }
+//
+//    /**
+//     * 单点登录Filter容器
+//     *
+//     * @return
+//     */
+//    @Bean
+//    public FilterRegistrationBean<SmartContainer> smartContainer() {
+//
+//        SmartContainer smartContainer = new SmartContainer();
+//        smartContainer.setServerUrl(properties.getServerUrl());
+//        smartContainer.setAppId(properties.getAppId());
+//        smartContainer.setAppSecret(properties.getAppSecret());
+//        SsoClientProperties.SsoFilter filter = properties.getFilter();
+//        Set<String> excludeUrls = filter.getExcludeUrls();
+//
+//        String join = String.join(",", excludeUrls);
+////        join += "/login,/logout,/oauth2/*,/custom/*,/assets/*";
+//        // 忽略拦截URL,多个逗号分隔
+//        smartContainer.setExcludeUrls(join);
+//
+//        smartContainer.setFilters(new LogoutFilter(), new LoginFilter());
+//
+//        FilterRegistrationBean<SmartContainer> registration = new FilterRegistrationBean<>();
+//        registration.setFilter(smartContainer);
+//
+//        Set<String> addUrlPatterns = filter.getAddUrlPatterns();
+//        addUrlPatterns.add("/*");
+//        String[] arr = addUrlPatterns.toArray(new String[addUrlPatterns.size()]);
+//        registration.addUrlPatterns(arr);
+//        registration.setOrder(filter.getOrder());
+//        registration.setName(filter.getName());
+//        return registration;
+//    }
 }

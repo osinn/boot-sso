@@ -15,9 +15,7 @@ spring:
         store-type: redis
 smart:
     sso:
-        app-id: server1
+        app-id: demo1
         app-secret: 123456
         server-url: http://server.smart-sso.com
         timeout: 7200
-        session:
-            manager: redis

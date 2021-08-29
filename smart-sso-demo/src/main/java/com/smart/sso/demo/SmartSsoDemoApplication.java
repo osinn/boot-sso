@@ -5,8 +5,8 @@ import com.smart.sso.client.annotation.EnableSSORedis;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@EnableSSOLocal
-//@EnableSSORedis
+//@EnableSSOLocal
+@EnableSSORedis
 @SpringBootApplication
 public class SmartSsoDemoApplication {
 

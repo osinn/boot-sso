@@ -1,5 +1,6 @@
 package com.smart.sso.client.annotation;
 
+import com.smart.sso.client.starter.SsoCommonAutoConfiguration;
 import com.smart.sso.client.starter.SsoRedisClientAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
@@ -13,7 +14,7 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Import(SsoRedisClientAutoConfiguration.class)
+@Import({SsoRedisClientAutoConfiguration.class, SsoCommonAutoConfiguration.class})
 public @interface EnableSSORedis {
 
 }

@@ -29,5 +29,3 @@ smart:
                 - /custom/*
                 - /assets/*
         timeout: 7200
-        session:
-            manager: redis

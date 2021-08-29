@@ -16,11 +16,6 @@ public class SsoClientProperties {
     public static final String PREFIX = "smart.sso";
 
     /**
-     * 服务端session管理方式，支持local和redis两种
-     */
-    public static final String SESSION_MANAGER = SsoClientProperties.PREFIX + ".session.manager";
-
-    /**
      * 单点登录服务端地址
      */
     private String serverUrl;
@@ -43,18 +38,7 @@ public class SsoClientProperties {
     /**
      * FilterRegistrationBean过滤器参数
      */
-    private final Session session = new Session();
-
     private final SsoFilter filter = new SsoFilter();
-
-    @Data
-    public static class Session {
-
-        /**
-         * 服务端session管理方式，支持local和redis两种(二选一)
-         */
-        private String manager = "local";
-    }
 
     /**
      * 单点登录Filter容器

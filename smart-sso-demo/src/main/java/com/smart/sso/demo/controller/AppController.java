@@ -36,12 +36,23 @@ public class AppController {
 	 * @param request
 	 * @return
 	 */
-    @RequestMapping
+    @RequestMapping("/test")
+	public Result test(HttpServletRequest request) {
+		SsoUser user = SessionUtils.getUser(request);
+		return Result.createSuccess(user);
+	}
+
+	/**
+	 * 初始页
+	 * @param request
+	 * @return
+	 */
+	@RequestMapping
 	public Result index(HttpServletRequest request) {
 		SsoUser user = SessionUtils.getUser(request);
 		return Result.createSuccess(user);
 	}
-	
+
 	/**
 	 * 登录提交
 	 * 

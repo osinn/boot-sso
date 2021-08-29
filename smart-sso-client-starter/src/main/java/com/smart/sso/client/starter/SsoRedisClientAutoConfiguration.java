@@ -34,7 +34,6 @@ import java.util.List;
 @EnableScheduling
 @EnableRedisHttpSession
 @EnableConfigurationProperties(SsoClientProperties.class)
-@ConditionalOnProperty(name = SsoClientProperties.SESSION_MANAGER, havingValue = SsoConstant.SESSION_MANAGER_REDIS, matchIfMissing = true)
 public class SsoRedisClientAutoConfiguration {
 
     private final SsoClientProperties properties;

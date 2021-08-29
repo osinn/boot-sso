@@ -1,6 +1,7 @@
 package com.smart.sso.client.annotation;
 
 import com.smart.sso.client.starter.SsoClientAutoConfiguration;
+import com.smart.sso.client.starter.SsoCommonAutoConfiguration;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;
@@ -13,7 +14,7 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Import(SsoClientAutoConfiguration.class)
+@Import({SsoClientAutoConfiguration.class, SsoCommonAutoConfiguration.class})
 public @interface EnableSSOLocal {
 
 }

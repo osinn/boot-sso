@@ -20,7 +20,6 @@ import javax.servlet.http.HttpSessionListener;
  */
 @Configuration
 @EnableConfigurationProperties(SsoClientProperties.class)
-@ConditionalOnProperty(name = SsoClientProperties.SESSION_MANAGER, havingValue = SsoConstant.SESSION_MANAGER_LOCAL, matchIfMissing = true)
 public class SsoClientAutoConfiguration {
 
     private final SsoClientProperties properties;
