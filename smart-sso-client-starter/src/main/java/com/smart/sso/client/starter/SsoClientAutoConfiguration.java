@@ -1,13 +1,11 @@
 package com.smart.sso.client.starter;
 
-import com.smart.sso.client.local.constant.SsoConstant;
 import com.smart.sso.client.local.listener.LogoutListener;
 import com.smart.sso.client.local.manager.LocalAccessTokenManager;
 import com.smart.sso.client.local.manager.LocalCodeManager;
 import com.smart.sso.client.local.manager.LocalRefreshTokenManager;
 import com.smart.sso.client.local.manager.LocalTicketGrantingTicketManager;
-import com.smart.sso.client.local.provider.SsoClientProperties;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import com.smart.sso.client.provider.SsoClientProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;

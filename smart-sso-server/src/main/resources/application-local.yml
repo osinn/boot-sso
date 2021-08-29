@@ -15,8 +15,4 @@ smart:
         server-url: http://server.smart-sso.com
         timeout: 7200
         filter:
-            exclude-urls:
-                - /login,/logout
-                - /oauth2/*
-                - /custom/*
-                - /assets/*
+            create-filter: false

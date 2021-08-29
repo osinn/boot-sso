@@ -1,9 +1,8 @@
 package com.smart.sso.client.starter;
 
 
-import com.smart.sso.client.local.constant.SsoConstant;
 import com.smart.sso.client.local.listener.LogoutListener;
-import com.smart.sso.client.local.provider.SsoClientProperties;
+import com.smart.sso.client.provider.SsoClientProperties;
 import com.smart.sso.client.local.session.SessionMappingStorage;
 import com.smart.sso.client.redis.manager.RedisAccessTokenManager;
 import com.smart.sso.client.redis.manager.RedisCodeManager;
@@ -11,7 +10,6 @@ import com.smart.sso.client.redis.manager.RedisRefreshTokenManager;
 import com.smart.sso.client.redis.manager.RedisTicketGrantingTicketManager;
 import com.smart.sso.client.redis.storage.RedisSessionMappingStorage;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.smart.sso.client.local.provider;
+package com.smart.sso.client.provider;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -45,6 +45,11 @@ public class SsoClientProperties {
      */
     @Data
     public static class SsoFilter {
+
+        /**
+         * 是否创建单点登录Filter容器(可自行创建过滤器指定拦截路径)
+         */
+        private boolean createFilter = true;
 
         private int order = 1;
 
