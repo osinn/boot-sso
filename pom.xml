@@ -14,7 +14,7 @@
 	<name>${project.artifactId}</name>
 	
 	<modules>
-		<module>smart-sso-client</module>
+		<module>smart-sso-client-starter</module>
 		<module>smart-sso-demo</module>
 		<module>smart-sso-server</module>
 	</modules>
