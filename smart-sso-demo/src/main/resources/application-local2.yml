@@ -1,5 +1,5 @@
 server:
-    port: 9090
+    port: 9093
 spring:
     freemarker:
         charset: UTF-8
@@ -7,22 +7,9 @@ spring:
         request-context-attribute: request
         suffix: .html
         template-loader-path: classpath:/templates
-    redis:
-        host: 127.0.0.1
-#        password: 123456
-        port: 6379
-    session:
-        store-type: redis
-#logging:
-#    level:
-#        root: debug
-
 smart:
     sso:
-        app-id: server1
+        app-id: demo1
         app-secret: 123456
         server-url: http://127.0.0.1:9090
-        filter:
-            # 服务不需要使用内置创建的过滤器
-            create-filter: false
         timeout: 7200

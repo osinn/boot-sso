@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-//@EnableSSOLocal
-@EnableSSORedis
+@EnableSSOLocal
+//@EnableSSORedis
 @SpringBootApplication
 public class SmartSsoServerApplication {
 

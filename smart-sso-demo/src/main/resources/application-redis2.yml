@@ -9,7 +9,7 @@ spring:
         template-loader-path: classpath:/templates
     redis:
         host: 127.0.0.1
-        password: 123456
+#        password: 123456
         port: 6379
     session:
         store-type: redis
@@ -17,7 +17,7 @@ smart:
     sso:
         app-id: demo1
         app-secret: 123456
-        server-url: http://server.smart-sso.com
+        server-url: http://127.0.0.1:9090
         timeout: 7200
         filter:
-            create-filter: false
+            create-filter: true

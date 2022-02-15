@@ -1,5 +1,19 @@
 # 简介
-- boot-sso 基于 smart-sso 将local、redis整合到一个模块中，改成starter自动化配置
+- boot-sso 基于 smart-sso 将local、redis整合到一个模块中，改成starter基于注解方式启用自动化配置,开箱即用
+
+# smart-sso开源地址
+```
+https://github.com/a466350665/smart-sso
+https://gitee.com/a466350665/smart-sso
+```
+
+# 快速开始
+- 服务端和客户端启动类上添加注解即可，然后启动即可
+```
+@EnableSSOLocal 本地缓存
+@EnableSSORedis redis缓存，需要在yml配置文件中配置redis地址
+```
+- 访问客户端地址：http://127.0.0.1:9092
 
 ## 简述
     smart-sso使用当下最流行的SpringBoot技术，基于OAuth2认证授权协议，为您构建一个易理解、高可用、高扩展性的分布式单点登录应用基层。

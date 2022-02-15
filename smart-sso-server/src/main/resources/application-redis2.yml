@@ -23,5 +23,6 @@ smart:
         app-secret: 123456
         server-url: http://server.smart-sso.com
         filter:
+            # 服务不需要使用内置创建的过滤器
             create-filter: false
         timeout: 7200

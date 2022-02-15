@@ -12,7 +12,8 @@ smart:
     sso:
         app-id: server1
         app-secret: 123456
-        server-url: http://server.smart-sso.com
+        server-url: http://127.0.0.1:9090
         timeout: 7200
         filter:
+            # 服务不需要使用内置创建的过滤器
             create-filter: false
