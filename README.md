@@ -6,6 +6,9 @@
 https://github.com/a466350665/smart-sso
 https://gitee.com/a466350665/smart-sso
 ```
+# boot-sso开源地址
+- github: [https://github.com/wency-cai/boot-sso](https://github.com/wency-cai/boot-sso)
+- gitee: [https://gitee.com/w160/boot-sso](https://gitee.com/w160/boot-sso)
 
 # 快速开始
 - 服务端和客户端启动类上添加注解即可，然后启动即可
